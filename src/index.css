@@ -81,6 +81,7 @@ hr.RampBreak--l {
 
 .RampInputSelect--root {
   width: 100%;
+  position: relative;
 }
 
 .RampInputSelect--input {
@@ -92,7 +93,8 @@ hr.RampBreak--l {
 
 .RampInputSelect--dropdown-container {
   display: none;
-  position: fixed;
+  position: absolute;
+  z-index: 2;
   width: 100%;
   max-width: 700px;
   border: 1px solid var(--color-darker-shade);
@@ -123,6 +125,9 @@ hr.RampBreak--l {
 
 .RampInputCheckbox--container {
   display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .RampInputCheckbox--label {
@@ -150,7 +155,12 @@ hr.RampBreak--l {
 }
 
 .RampInputCheckbox--input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .RampButton {
